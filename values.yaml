@@ -78,15 +78,15 @@ hub:
   extraVolumes: []
   extraVolumeMounts: []
   image:
-    name: voidmarcus/jupyterhub-spark
-    tag: "latest"
+    name: jupyterhub/k8s-hub
+    tag: "1.2.0"
     pullPolicy:
     pullSecrets: []
   resources: {}
   containerSecurityContext:
     runAsUser: 1000
     runAsGroup: 1000
-    allowPrivilegeEscalation: false
+    allowPrivilegeEscalation: true
   lifecycle: {}
   services: {}
   pdb:
